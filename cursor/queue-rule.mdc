@@ -1,0 +1,15 @@
+---
+description: Queue-style multi-item agent workflow
+alwaysApply: false
+---
+
+When the user asks to create a queue, split work into results, fan out workers, or process many items independently:
+
+1. Use the queue-coordinator skill.
+2. Use the queue-publisher skill to produce small batches of atomic work items.
+3. Use the queue-worker skill to handle exactly one item at a time.
+4. Prefer batches of 3-10 items.
+5. Do not wait for all possible items before starting workers.
+6. If true subagents are unavailable, simulate workers sequentially while preserving strict item boundaries.
+7. Keep a visible status summary of pending, done, and failed items.
+8. Stop when the publisher returns done, the max item limit is reached, or user confirmation is required.
