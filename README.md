@@ -33,15 +33,3 @@ Publisher returns 3-10 items quickly
 Coordinator dispatches workers
 Publisher continues with next batch
 ```
-
-## Files
-
-```text
-skills/queue-coordinator.md
-skills/queue-publisher.md
-skills/queue-worker.md
-cursor/queue-command.md
-cursor/queue-rule.mdc
-claude-code/queue-coordinator-agent.md
-claude-code/queue-worker-agent.md
-```
